@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Serif_JP } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSerifJp = Noto_Serif_JP({
+  weight: ["400", "500", "700"],
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="jp">
-      <body className={inter.className}>{children}</body>
+      <body className={notoSerifJp.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
