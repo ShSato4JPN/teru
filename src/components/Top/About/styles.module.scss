@@ -1,0 +1,21 @@
+.about {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    font-size: 3rem;
+  }
+
+  &__body {
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+  }
+}

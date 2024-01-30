@@ -1,4 +1,4 @@
-import Top from "@/components/Top/page";
+import Top from "@/components/Top";
 
 export default function Page() {
   return <Top />;

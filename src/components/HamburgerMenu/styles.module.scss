@@ -1,0 +1,51 @@
+.menu {
+  position: fixed;
+  background-color: #ea2e2edd;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__wrapper {
+    padding: 10px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &__title {
+      font-size: 2rem;
+      margin-right: 15px;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+    }
+
+    &__chevron {
+      position: absolute;
+      right: 2rem;
+    }
+
+    &-active {
+      background-color: #fff;
+      color: rgb(15 9 7);
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: rgb(15 9 7);
+    }
+  }
+}

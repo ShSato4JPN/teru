@@ -1,0 +1,28 @@
+.title {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: tomato;
+
+  &__wrapper {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff;
+    font-size: 120px;
+    padding: 10px;
+    writing-mode: vertical-rl;
+    border-radius: 20px;
+  }
+
+  .swiper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

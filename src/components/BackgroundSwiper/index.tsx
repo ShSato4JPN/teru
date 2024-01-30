@@ -9,11 +9,11 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
-type ImageSwiperProps = {
+type BackgroundSwiperProps = {
   imagePaths: string[];
 };
 
-function ImageSwiper({ imagePaths }: ImageSwiperProps): JSX.Element {
+function BackgroundSwiper({ imagePaths }: BackgroundSwiperProps): JSX.Element {
   const pagination: SwiperOptions["pagination"] = {
     clickable: true,
     bulletActiveClass: styles["swiper-pagination-bullet-active"],
@@ -32,21 +32,25 @@ function ImageSwiper({ imagePaths }: ImageSwiperProps): JSX.Element {
   };
 
   return (
-    <Swiper {...swiperOptions} className={styles["swiper"]}>
-      {imagePaths.map((path, i) => (
-        <SwiperSlide className={styles["swiper-slide"]} key={`${path}-${i}`}>
-          <Image
-            src={path}
-            width={800}
-            height={800}
-            style={{ objectFit: "cover" }}
-            alt={`shop image no ${i}`}
-            className={styles["swiper-image"]}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className={styles["container"]}>
+      <div className={styles["top-gradation"]}></div>
+      <Swiper {...swiperOptions} className={styles["swiper"]}>
+        {imagePaths.map((path, i) => (
+          <SwiperSlide className={styles["swiper-slide"]} key={`${path}-${i}`}>
+            <Image
+              src={path}
+              width={800}
+              height={800}
+              style={{ objectFit: "cover" }}
+              alt={`shop image no ${i}`}
+              className={styles["swiper-image"]}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className={styles["bottom-gradation"]}></div>
+    </div>
   );
 }
 
-export default ImageSwiper;
+export default BackgroundSwiper;
