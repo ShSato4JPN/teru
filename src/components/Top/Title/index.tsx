@@ -2,6 +2,11 @@
 import { Train_One } from "next/font/google";
 import BackgroundSwiper from "@/components/BackgroundSwiper";
 import styles from "./styles.module.scss";
+import photo01 from "/public/photo-01.jpg";
+import photo02 from "/public/photo-02.jpg";
+import photo03 from "/public/photo-03.jpg";
+import photo04 from "/public/photo-04.jpg";
+import photo05 from "/public/photo-05.jpg";
 
 const trainOne = Train_One({
   weight: "400",
@@ -9,13 +14,7 @@ const trainOne = Train_One({
 });
 
 function Title(): JSX.Element {
-  const imagePaths = [
-    "/photo-01.jpg",
-    "/photo-02.jpg",
-    "/photo-03.jpg",
-    "/photo-04.jpg",
-    "/photo-05.jpg",
-  ];
+  const imagePaths = [photo01, photo02, photo03, photo04, photo05];
 
   return (
     <div className={`${styles["title"]} ${trainOne.className}`}>

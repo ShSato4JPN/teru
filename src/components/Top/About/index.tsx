@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import photo01 from "/public/photo-01.jpg";
+import photo02 from "/public/photo-02.jpg";
 
 function About(): JSX.Element {
   return (
@@ -8,7 +10,7 @@ function About(): JSX.Element {
       <div className={styles["about__background"]}>
         <div className={styles["about__background__image__1"]}>
           <Image
-            src={"/photo-01.jpg"}
+            src={photo01}
             width={800}
             height={800}
             style={{ objectFit: "cover" }}
@@ -18,7 +20,7 @@ function About(): JSX.Element {
         </div>
         <div className={styles["about__background__image__2"]}>
           <Image
-            src={"/photo-02.jpg"}
+            src={photo02}
             width={800}
             height={800}
             style={{ objectFit: "cover" }}

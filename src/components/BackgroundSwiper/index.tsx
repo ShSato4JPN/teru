@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import { SwiperOptions } from "swiper/types";
@@ -10,7 +11,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 type BackgroundSwiperProps = {
-  imagePaths: string[];
+  imagePaths: StaticImageData[];
 };
 
 function BackgroundSwiper({ imagePaths }: BackgroundSwiperProps): JSX.Element {

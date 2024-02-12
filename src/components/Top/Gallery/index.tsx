@@ -5,6 +5,11 @@ import { SwiperOptions } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 import styles from "./styles.module.scss";
+import photo01 from "/public/photo-01.jpg";
+import photo02 from "/public/photo-02.jpg";
+import photo03 from "/public/photo-03.jpg";
+import photo04 from "/public/photo-04.jpg";
+import photo05 from "/public/photo-05.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,13 +17,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 function Gallery(): JSX.Element {
-  const imagePaths = [
-    "/photo-01.jpg",
-    "/photo-02.jpg",
-    "/photo-03.jpg",
-    "/photo-04.jpg",
-    "/photo-05.jpg",
-  ];
+  const imagePaths = [photo01, photo02, photo03, photo04, photo05];
 
   const pagination: SwiperOptions["pagination"] = {
     clickable: true,
