@@ -30,14 +30,7 @@ function Top(): JSX.Element {
           <Title />
         </section>
         <section className={styles["about"]}>
-          <motion.div
-            variants={animation}
-            viewport={{ once: true, amount: 0 }}
-            initial="offscreen"
-            whileInView="onscreen"
-          >
-            <About />
-          </motion.div>
+          <About />
         </section>
         <section className={styles["price"]}>
           <motion.div
