@@ -5,11 +5,19 @@ import styles from "./styles.module.scss";
 
 function Access(): JSX.Element {
   const data = {
+    shop: {
+      column: "店名",
+      data: "花魁",
+    },
+    tel: { column: "電話番号", data: "000-0000-0000" },
     address: {
       column: "住所",
       data: "〒000-0000 東京都渋谷区渋谷1-1-1",
     },
-    tel: { column: "電話番号", data: "000-0000-0000" },
+    access: {
+      column: "アクセス",
+      data: "新宿駅から徒歩10分",
+    },
     open: { column: "営業時間", data: "10:00 ~ 23:00" },
     close: { column: "定休日", data: "月水金" },
   };
@@ -34,7 +42,7 @@ function Access(): JSX.Element {
   return (
     <div className={styles["access"]}>
       <div className={styles["access__wrapper"]}>
-        <h1 className={styles["access__header"]}>Access</h1>
+        <h1 className={styles["access__header"]}>INFORMATION</h1>
         <div className={styles["access__body"]}>
           <ul>{items}</ul>
         </div>

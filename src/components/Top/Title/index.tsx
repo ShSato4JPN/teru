@@ -19,6 +19,7 @@ function Title(): JSX.Element {
 
   return (
     <div className={`${styles["title"]} ${trainOne.className}`}>
+      <div className={styles["top-gradation"]}></div>
       <div className={styles["swiper"]}>
         <BackgroundSwiper imagePaths={imagePaths} />
       </div>
@@ -29,6 +30,7 @@ function Title(): JSX.Element {
           <rp>)</rp>
         </ruby>
       </div>
+      <div className={styles["bottom-gradation"]}></div>
     </div>
   );
 }

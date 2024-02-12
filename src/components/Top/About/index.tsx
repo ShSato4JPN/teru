@@ -1,13 +1,36 @@
 "use client";
+import Image from "next/image";
 import styles from "./styles.module.scss";
 
 function About(): JSX.Element {
   return (
     <div className={styles["about"]}>
+      <div className={styles["about__background"]}>
+        <div className={styles["about__background__image__1"]}>
+          <Image
+            src={"/photo-01.jpg"}
+            width={800}
+            height={800}
+            style={{ objectFit: "cover" }}
+            alt={`about background image no1`}
+            className={styles["about__background__images"]}
+          />
+        </div>
+        <div className={styles["about__background__image__2"]}>
+          <Image
+            src={"/photo-02.jpg"}
+            width={800}
+            height={800}
+            style={{ objectFit: "cover" }}
+            alt={`about background image no2`}
+            className={styles["about__background__images"]}
+          />
+        </div>
+      </div>
       <div className={styles["about__wrapper"]}>
-        <h1 className={styles["about__header"]}>花魁 oiran</h1>
         <div className={styles["about__body"]}>
-          当店は和をテーマにしたガールバー兼スポーツバーです。楽しくお酒を楽しみながら、ダーツやスポーツ観戦もお楽しみいただけます。フレンドリーな店員がお出迎えし、心地よいひとときを提供します。是非、お気軽にご来店ください。
+          <span className={styles["emphasis"]}>花魁</span>
+          はスポーツ観戦やダーツを楽しみながら、くつろぎのひとときをお過ごしいただける場所です。和をテーマにした特別な空間で、他にはない上質な雰囲気をお楽しみください。親しみやすいスタッフが心を込めてサポートし、心地よい時間を演出いたします。ぜひ、お気軽にご来店ください。
         </div>
       </div>
     </div>

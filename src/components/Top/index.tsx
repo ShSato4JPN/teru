@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Title from "@/components/Top/Title";
-import News from "@/components/Top/News";
+//import News from "@/components/Top/News";
+import Price from "@/components/Top/Price";
 import Access from "@/components/Top/Access";
 import Gallery from "@/components/Top/Gallery";
 import About from "@/components/Top/About";
@@ -10,7 +11,7 @@ import styles from "./styles.module.scss";
 function Top(): JSX.Element {
   const animation = {
     offscreen: {
-      y: 130,
+      y: 250,
       opacity: 0,
     },
     onscreen: {
@@ -25,7 +26,9 @@ function Top(): JSX.Element {
   return (
     <main className={styles["container"]}>
       <div className={styles["wrapper"]}>
-        <Title />
+        <section className={styles["title"]}>
+          <Title />
+        </section>
         <section className={styles["about"]}>
           <motion.div
             variants={animation}
@@ -34,6 +37,16 @@ function Top(): JSX.Element {
             whileInView="onscreen"
           >
             <About />
+          </motion.div>
+        </section>
+        <section className={styles["price"]}>
+          <motion.div
+            variants={animation}
+            viewport={{ once: true, amount: 0 }}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Price />
           </motion.div>
         </section>
         <section className={styles["gallery"]}>
@@ -46,7 +59,7 @@ function Top(): JSX.Element {
             <Gallery />
           </motion.div>
         </section>
-        <section className={styles["news"]}>
+        {/* <section className={styles["news"]}>
           <motion.div
             variants={animation}
             viewport={{ once: true, amount: 0 }}
@@ -55,7 +68,7 @@ function Top(): JSX.Element {
           >
             <News />
           </motion.div>
-        </section>
+        </section> */}
         <section className={styles["access"]}>
           <motion.div
             variants={animation}

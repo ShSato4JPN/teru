@@ -34,7 +34,7 @@ function Gallery(): JSX.Element {
     <div className={styles["gallery"]}>
       <div className={styles["gallery__wrapper"]}>
         <div className={styles["gallery__body"]}>
-          <Swiper {...swiperOptions} className={styles["free-swiper"]}>
+          <Swiper {...swiperOptions} className={styles["swiper"]}>
             {imagePaths.map((path, i) => (
               <SwiperSlide>
                 <div className={styles["gallery__image"]} key={`${path}-${i}`}>

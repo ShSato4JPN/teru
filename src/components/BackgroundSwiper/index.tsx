@@ -32,24 +32,20 @@ function BackgroundSwiper({ imagePaths }: BackgroundSwiperProps): JSX.Element {
   };
 
   return (
-    <div className={styles["container"]}>
-      <div className={styles["top-gradation"]}></div>
-      <Swiper {...swiperOptions} className={styles["swiper"]}>
-        {imagePaths.map((path, i) => (
-          <SwiperSlide className={styles["swiper-slide"]} key={`${path}-${i}`}>
-            <Image
-              src={path}
-              width={800}
-              height={800}
-              style={{ objectFit: "cover" }}
-              alt={`shop image no ${i}`}
-              className={styles["swiper-image"]}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className={styles["bottom-gradation"]}></div>
-    </div>
+    <Swiper {...swiperOptions} className={styles["swiper"]}>
+      {imagePaths.map((path, i) => (
+        <SwiperSlide className={styles["swiper-slide"]} key={`${path}-${i}`}>
+          <Image
+            src={path}
+            width={800}
+            height={800}
+            style={{ objectFit: "cover" }}
+            alt={`shop image no ${i}`}
+            className={styles["swiper-image"]}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
 
