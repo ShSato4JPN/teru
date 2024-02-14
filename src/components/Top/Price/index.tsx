@@ -11,8 +11,12 @@ function Price(): JSX.Element {
   return (
     <div className={styles["price"]}>
       <div className={styles["price__wrapper"]}>
-        <div className={styles["price__body"]}></div>
+        <h1 className={styles["price__header"]}>PRICE</h1>
+        <div className={styles["price__body"]}>
+          <h1>test</h1>
+        </div>
       </div>
+      <div className={styles["price__map"]}></div>
     </div>
   );
 }

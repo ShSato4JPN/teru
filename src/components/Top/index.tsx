@@ -4,7 +4,7 @@ import Title from "@/components/Top/Title";
 //import News from "@/components/Top/News";
 import Price from "@/components/Top/Price";
 import Access from "@/components/Top/Access";
-import Gallery from "@/components/Top/Gallery";
+//import Gallery from "@/components/Top/Gallery";
 import About from "@/components/Top/About";
 import styles from "./styles.module.scss";
 
@@ -42,7 +42,7 @@ function Top(): JSX.Element {
             <Price />
           </motion.div>
         </section>
-        <section className={styles["gallery"]}>
+        {/* <section className={styles["gallery"]}>
           <motion.div
             variants={animation}
             viewport={{ once: true, amount: 0 }}
@@ -51,7 +51,7 @@ function Top(): JSX.Element {
           >
             <Gallery />
           </motion.div>
-        </section>
+        </section> */}
         {/* <section className={styles["news"]}>
           <motion.div
             variants={animation}
