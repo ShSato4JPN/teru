@@ -1,14 +1,11 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { BsTwitterX } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 import styles from "./styles.module.scss";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-
-function Price(): JSX.Element {
+function sns(): JSX.Element {
   const animation = {
     offscreen: {
       opacity: 0,
@@ -27,16 +24,19 @@ function Price(): JSX.Element {
       viewport={{ once: true, margin: "-250px" }}
       initial="offscreen"
       whileInView="onscreen"
-      className={styles["price"]}
+      className={styles["sns"]}
     >
-      <div className={styles["price__wrapper"]}>
-        <h1 id="price" className={styles["price__header"]}>
-          PRICE
+      <div className={styles["sns__wrapper"]}>
+        <h1 id="sns" className={styles["sns__header"]}>
+          SNS
         </h1>
-        <div className={styles["price__body"]}>test</div>
+        <div className={styles["sns__body"]}>
+          <BsTwitterX className={styles["x-icon"]} />
+          <BsInstagram className={styles["instagram-icon"]} />
+        </div>
       </div>
     </motion.div>
   );
 }
 
-export default Price;
+export default sns;

@@ -1,5 +1,4 @@
-.price {
-  height: 600px;
+.sns {
   margin: 10px 0;
 
   &__wrapper {
@@ -21,7 +20,6 @@
   &__body {
     display: flex;
     justify-content: center;
-    border: 1px solid #ccc;
     width: 100%;
     height: 100%;
     border-color: var(--font-color);

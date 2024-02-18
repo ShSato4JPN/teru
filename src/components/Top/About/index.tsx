@@ -6,21 +6,19 @@ import photo01 from "/public/photo-01.jpg";
 import photo02 from "/public/photo-02.jpg";
 
 function About(): JSX.Element {
-  const bottomToTop = {
+  const message = {
     offscreen: {
-      y: 250,
       opacity: 0,
     },
     onscreen: {
-      y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.9,
       },
     },
   };
 
-  const righToLeft = {
+  const leftImage = {
     offscreen: {
       x: 250,
       opacity: 0,
@@ -34,7 +32,7 @@ function About(): JSX.Element {
     },
   };
 
-  const leftToRight = {
+  const rightImage = {
     offscreen: {
       x: -250,
       opacity: 0,
@@ -50,41 +48,39 @@ function About(): JSX.Element {
 
   return (
     <div className={styles["about"]}>
-      <div className={styles["about__background__image1"]}>
-        <motion.div
-          variants={righToLeft}
-          viewport={{ once: true, amount: 0 }}
-          initial="offscreen"
-          whileInView="onscreen"
-        >
-          <Image
-            src={photo01}
-            width={800}
-            height={800}
-            style={{ objectFit: "cover" }}
-            alt={"image1"}
-          />
-        </motion.div>
-      </div>
-      <div className={styles["about__background__image2"]}>
-        <motion.div
-          variants={leftToRight}
-          viewport={{ once: true, amount: 0 }}
-          initial="offscreen"
-          whileInView="onscreen"
-        >
-          <Image
-            src={photo02}
-            width={800}
-            height={800}
-            style={{ objectFit: "cover" }}
-            alt={"image2"}
-          />
-        </motion.div>
-      </div>
       <motion.div
-        variants={bottomToTop}
-        viewport={{ once: true, amount: 0 }}
+        variants={leftImage}
+        viewport={{ once: true }}
+        initial="offscreen"
+        whileInView="onscreen"
+        className={styles["about__background__image1"]}
+      >
+        <Image
+          src={photo01}
+          width={800}
+          height={800}
+          style={{ objectFit: "cover" }}
+          alt={"image1"}
+        />
+      </motion.div>
+      <motion.div
+        variants={rightImage}
+        viewport={{ once: true }}
+        initial="offscreen"
+        whileInView="onscreen"
+        className={styles["about__background__image2"]}
+      >
+        <Image
+          src={photo02}
+          width={800}
+          height={800}
+          style={{ objectFit: "cover" }}
+          alt={"image2"}
+        />
+      </motion.div>
+      <motion.div
+        variants={message}
+        viewport={{ once: true, margin: "-150px" }}
         initial="offscreen"
         whileInView="onscreen"
       >

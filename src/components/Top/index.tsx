@@ -1,28 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
 import Title from "@/components/Top/Title";
 //import News from "@/components/Top/News";
+// import Sns from "@/components/Top/Sns";
 import Price from "@/components/Top/Price";
-import Access from "@/components/Top/Access";
+import Access from "@/components/Top/Information";
 //import Gallery from "@/components/Top/Gallery";
 import About from "@/components/Top/About";
 import styles from "./styles.module.scss";
 
 function Top(): JSX.Element {
-  const animation = {
-    offscreen: {
-      y: 250,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
-
   return (
     <main className={styles["container"]}>
       <div className={styles["wrapper"]}>
@@ -33,15 +19,11 @@ function Top(): JSX.Element {
           <About />
         </section>
         <section className={styles["price"]}>
-          <motion.div
-            variants={animation}
-            viewport={{ once: true, amount: 0 }}
-            initial="offscreen"
-            whileInView="onscreen"
-          >
-            <Price />
-          </motion.div>
+          <Price />
         </section>
+        {/* <section className={styles["sns"]}>
+          <Sns />
+        </section> */}
         {/* <section className={styles["gallery"]}>
           <motion.div
             variants={animation}
@@ -63,14 +45,7 @@ function Top(): JSX.Element {
           </motion.div>
         </section> */}
         <section className={styles["access"]}>
-          <motion.div
-            variants={animation}
-            viewport={{ once: true, amount: 0 }}
-            initial="offscreen"
-            whileInView="onscreen"
-          >
-            <Access />
-          </motion.div>
+          <Access />
         </section>
       </div>
     </main>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Twirl as Hamburger } from "hamburger-react";
 import { motion, AnimationProps } from "framer-motion";
 import { CgChevronRight } from "react-icons/cg";
+import config from "@/config";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 
@@ -27,40 +28,7 @@ function HamburgerMenu(): JSX.Element {
     },
   };
 
-  const menuItems = [
-    {
-      title: "TOP",
-      subtitle: "トップページ",
-      link: "/",
-    },
-    {
-      title: "SHOP",
-      subtitle: "店舗情報",
-      link: "/shop",
-    },
-    {
-      title: "STUFF",
-      subtitle: "スタッフ",
-      link: "/stuff",
-    },
-    {
-      title: "EVENT",
-      subtitle: "イベント",
-      link: "/event",
-    },
-    {
-      title: "RECRUIT",
-      subtitle: "求人情報",
-      link: "/recruit",
-    },
-    {
-      title: "CONTACT",
-      subtitle: "コンタクト",
-      link: "/contact",
-    },
-  ];
-
-  const items = menuItems.map((item) => (
+  const items = config.menu.map((item) => (
     <li className={styles["menu__item"]} key={item.title}>
       <Link href={item.link}>
         <span className={styles["menu__item__title"]}>{item.title}</span>
@@ -72,7 +40,7 @@ function HamburgerMenu(): JSX.Element {
 
   return (
     <>
-      <Hamburger toggled={isOpen} toggle={setIsOpen} />
+      <Hamburger toggled={isOpen} toggle={setIsOpen} color="#fff" />
       <motion.nav initial={false} animate={isOpen ? show : hide}>
         <div className={styles["menu"]}>
           <div className={styles["menu__wrapper"]}>

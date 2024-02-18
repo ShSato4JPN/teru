@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+  color: #fff;
 }
 
 .header {
@@ -9,12 +10,4 @@
   height: 50px;
   top: 0;
   left: 0;
-}
-
-.title,
-.about,
-.news,
-.access,
-.gallery {
-  background-color: var(--background-color);
 }
