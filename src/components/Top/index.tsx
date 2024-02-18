@@ -44,7 +44,7 @@ function Top(): JSX.Element {
             <News />
           </motion.div>
         </section> */}
-        <section className={styles["access"]}>
+        <section className={styles["information"]}>
           <Access />
         </section>
       </div>
