@@ -24,7 +24,7 @@ function Price(): JSX.Element {
   return (
     <motion.div
       variants={animation}
-      viewport={{ once: true, margin: "-250px" }}
+      viewport={{ once: true, margin: "-100px" }}
       initial="offscreen"
       whileInView="onscreen"
       className={styles["price"]}
