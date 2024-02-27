@@ -43,10 +43,12 @@ function Information(): JSX.Element {
         <h1 id="information" className={styles["information__header"]}>
           INFORMATION
         </h1>
-        <div className={styles["information__body"]}>{items}</div>
-      </div>
-      <div className={styles["information__map"]}>
-        <GoogleMap />
+        <div className={styles["information__body"]}>
+          <div className={styles["information__access"]}>{items}</div>
+          <div className={styles["information__map"]}>
+            <GoogleMap />
+          </div>
+        </div>
       </div>
     </motion.div>
   );

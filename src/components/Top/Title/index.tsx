@@ -23,11 +23,9 @@ function Title(): JSX.Element {
         <BackgroundSwiper imagePaths={imagePaths} />
       </div>
       <div className={styles["title__wrapper"]}>
-        <ruby>
-          花魁 <rp>(</rp>
-          <rt>OIRAN</rt>
-          <rp>)</rp>
-        </ruby>
+        <div className={styles["title__image"]}>
+          <img src={"/sample2.png"} alt="" />
+        </div>
       </div>
       <div className={styles["bottom-gradation"]}></div>
     </div>
