@@ -1,7 +1,7 @@
 "use client";
 import { BsTwitterX } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import HamburgerMenu from "@/components/HamburgerMenu";
+import HamburgerMenu from "../HamburgerMenu";
 import styles from "./styles.module.scss";
 
 function Header(): JSX.Element {

@@ -1,6 +1,6 @@
 "use client";
 import { Train_One } from "next/font/google";
-import BackgroundSwiper from "@/components/BackgroundSwiper";
+import BackgroundSwiper from "../../BackgroundSwiper";
 import styles from "./styles.module.scss";
 import photo01 from "/public/photo-01.jpg";
 import photo02 from "/public/photo-02.jpg";

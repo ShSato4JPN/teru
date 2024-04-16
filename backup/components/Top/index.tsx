@@ -1,11 +1,11 @@
 "use client";
-import Title from "@/components/Top/Title";
+import Title from "./Title";
 //import News from "@/components/Top/News";
 // import Sns from "@/components/Top/Sns";
-import Price from "@/components/Top/Price";
-import Access from "@/components/Top/Information";
+import Price from "./Price";
+import Access from "./Information";
 //import Gallery from "@/components/Top/Gallery";
-import About from "@/components/Top/About";
+import About from "./About";
 import styles from "./styles.module.scss";
 
 function Top(): JSX.Element {

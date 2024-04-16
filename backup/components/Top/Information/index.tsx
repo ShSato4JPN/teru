@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 import config from "@/config";
-import GoogleMap from "@/components/GoogleMap";
+import GoogleMap from "../../GoogleMap";
 import styles from "./styles.module.scss";
 
 function Information(): JSX.Element {
