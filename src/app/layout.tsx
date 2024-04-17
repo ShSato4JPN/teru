@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP } from "next/font/google";
+import { Klee_One } from "next/font/google";
+
+import Layout from "@/components/Layout";
 import "./globals.scss";
 
-const notoSerifJp = Noto_Serif_JP({
-  weight: ["400", "500", "700"],
-  preload: false,
+const notoSerifJp = Klee_One({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "600",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="jp">
-      <body className={notoSerifJp.className}>{children}</body>
+      <body className={notoSerifJp.className}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

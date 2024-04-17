@@ -1,3 +1,5 @@
+import TeruTop from "@/components/TeruTop";
+
 export default function Page() {
-  return <h1>test</h1>;
+  return <TeruTop />;
 }

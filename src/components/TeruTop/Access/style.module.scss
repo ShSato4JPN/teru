@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.access {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // @media (width >= 428px) {
+  // }
+
+  @media (width >= 768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.information {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 1.6rem;
+  letter-spacing: 0.04rem;
+}
+
+.key {
+  vertical-align: baseline;
+}
+
+.value {
+  width: 100%;
+  text-align: left;
+  white-space: pre-wrap;
+}

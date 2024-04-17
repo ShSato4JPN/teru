@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "dayjs": "1.11.10",
     "framer-motion": "10.18.0",
     "hamburger-react": "2.5.0",
     "next": "14.2.1",

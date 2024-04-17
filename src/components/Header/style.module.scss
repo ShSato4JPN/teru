@@ -1,0 +1,15 @@
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+}
+
+.header {
+  position: relative;
+}
+
+.hamburgerMenu {
+  position: absolute;
+  right: 10px;
+  overflow: hidden;
+}
