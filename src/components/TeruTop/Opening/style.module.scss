@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: orange;
+  background: orange;
 }
 
 .kanji,
@@ -31,8 +31,8 @@
 
   background-image: linear-gradient(
     180deg,
-    var(--background-color) 10%,
-    var(--background-color-gradient) 100%
+    var(--background) 10%,
+    var(--background-gradient) 100%
   );
 }
 
@@ -47,7 +47,7 @@
 
   background-image: linear-gradient(
     0deg,
-    var(--background-color) 10%,
-    var(--background-color-gradient) 100%
+    var(--background) 10%,
+    var(--background-gradient) 100%
   );
 }
