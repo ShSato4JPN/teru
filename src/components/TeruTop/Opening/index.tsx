@@ -11,7 +11,7 @@ export default function Opening() {
       <AutoSwiper />
       <div className={styles.name}>
         <p className={styles.kanji}>花魁</p>
-        <p className={styles.alphabet}>oiran</p>
+        <p className={styles.alphabet}>OIRAN</p>
       </div>
       <div className={styles.gradationBottom} />
     </div>
