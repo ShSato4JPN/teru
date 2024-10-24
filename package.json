@@ -10,15 +10,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "dayjs": "1.11.10",
+    "dayjs": "1.11.13",
     "framer-motion": "10.18.0",
-    "hamburger-react": "2.5.0",
-    "next": "14.2.1",
+    "hamburger-react": "2.5.1",
+    "next": "14.2.16",
     "react": "18",
     "react-dom": "18",
-    "react-icons": "5.0.1",
-    "sass": "1.75.0",
-    "swiper": "11.1.1"
+    "react-icons": "5.3.0",
+    "sass": "1.80.4",
+    "swiper": "11.1.14"
   },
   "devDependencies": {
     "@commitlint/cli": "19.2.2",
